@@ -45,11 +45,17 @@ main {
 .card {
     background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 30px;
     width: 100%;
     max-width: 420px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .card h2 {
@@ -86,7 +92,7 @@ footer {
 }
 
 .footer {
-    background-color:#DEB887;
+    background-color: #DEB887;
     color: #fff;
     margin-top: auto;
 }
