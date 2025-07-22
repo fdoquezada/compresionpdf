@@ -20,6 +20,14 @@
         <p>Una pequeña herramienta para facilitar tu dia a dia </p>
     </nav>
 
+    <div id="progressContainer" style="display:none; width:100%; max-width:400px; margin:20px auto;">
+        <div id="progressBar" style="height:18px; background:#e0e0e0; border-radius:8px; overflow:hidden;">
+            <div id="progressFill" style="height:100%; width:0; background:#0077b6; transition:width 0.3s;"></div>
+        </div>
+        <div id="progressText" style="text-align:center; font-size:14px; margin-top:4px; color:#333;"></div>
+    </div>
+    <div id="statusMessage" style="text-align:center; color:#0077b6; font-size:15px; margin-bottom:10px;"></div>
+
     <main>
         <section class="card">
             <h2>🧩 Separar PDF</h2>
@@ -31,6 +39,17 @@
             <h2>📎 Unir PDFs</h2>
             <input type="file" id="pdfsToMerge" accept="application/pdf" multiple />
             <button onclick="unirPDFs()">Unir y Descargar</button>
+        </section>
+
+        <section class="card">
+            <h2>🖼️ Imagen a PDF</h2>
+            <input type="file" id="imageToPdf" accept="image/*" />
+            <button onclick="imagenAPDF()">Convertir y Descargar</button>
+        </section>
+        <section class="card">
+            <h2>🖼️➕ Imágenes Múltiples a PDF</h2>
+            <input type="file" id="multiImagesToPdf" accept="image/*" multiple />
+            <button onclick="multiplesImagenesAPDF()">Convertir y Descargar</button>
         </section>
     </main>
 
