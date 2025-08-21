@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Algo salió mal — Error</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="icon" href="static/img/icon.png" />
+</head>
+<body>
+    <div class="wrap">
+        <main class="card" role="main" aria-labelledby="title">
+            <div class="badge" aria-hidden="true">⚠️ Error <span class="code" data-error-code>404</span></div>
+            <h1 id="title">¡Ups! No encontramos lo que buscas</h1>
+            <p>
+                Puede que la página no exista, haya sido movida o no tengas permiso para verla.
+                Si crees que es un error, intenta recargar o vuelve al inicio.
+            </p>
+            <div class="actions">
+                <a class="btn primary" href="index.html">Ir al inicio</a>
+                <button class="btn" onclick="location.reload()" type="button">Recargar</button>
+                <button class="btn" onclick="history.back()" type="button">Volver atrás</button>
+            </div>
+            <div class="path" aria-label="Ruta solicitada">
+                Ruta solicitada: <span id="path">/</span>
+            </div>
+            <footer>
+                Código mostrado: <span class="code" data-error-code>404</span>
+                · Si persiste, contacta al administrador.
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

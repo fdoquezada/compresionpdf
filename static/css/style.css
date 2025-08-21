@@ -193,3 +193,150 @@ footer {
     margin-bottom: 8px;
     gap: 4px;
 }
+
+/* ========================= */
+/* Estilos Página de Error   */
+/* ========================= */
+body.error-page {
+    /* Variables y base */
+    --bg: #0f172a;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --accent: #22d3ee;
+    --accent-2: #60a5fa;
+    --danger: #f87171;
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--text);
+    background: radial-gradient(1200px 800px at 20% 10%, rgba(34,211,238,0.09), transparent),
+                radial-gradient(1000px 700px at 80% 30%, rgba(96,165,250,0.08), transparent),
+                var(--bg);
+    /* Evita layout global del sitio */
+    display: block;
+}
+
+.error-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.error-card {
+    width: 100%;
+    max-width: 680px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
+    padding: 32px;
+    backdrop-filter: blur(6px);
+}
+
+.error-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--danger);
+    background: rgba(248,113,113,0.12);
+    border: 1px solid rgba(248,113,113,0.24);
+    border-radius: 999px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+}
+
+.error-page h1 {
+    margin: 0 0 12px 0;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.error-page p {
+    color: var(--muted);
+    margin: 0 0 20px 0;
+}
+
+.error-code {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-variant-numeric: tabular-nums;
+    color: #fca5a5;
+}
+
+.error-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.error-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.06);
+    color: var(--text);
+    transition: transform .08s ease, background .2s ease, border-color .2s ease;
+    will-change: transform;
+    cursor: pointer;
+}
+
+.error-btn:hover {
+    transform: translateY(-1px);
+    background: rgba(255,255,255,0.09);
+    border-color: rgba(255,255,255,0.2);
+}
+
+.error-btn.primary {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    border: none;
+    color: #0b1220;
+}
+
+.error-btn.primary:hover {
+    filter: brightness(1.03);
+}
+
+.error-path {
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--muted);
+    opacity: .9;
+    word-break: break-all;
+}
+
+.error-footer {
+    margin-top: 28px;
+    font-size: 12px;
+    color: var(--muted);
+    opacity: .8;
+}
+
+@media (prefers-color-scheme: light) {
+    body.error-page {
+        --bg: #f6f7fb;
+        --text: #0b1220;
+        --muted: #475569;
+        background: radial-gradient(1200px 800px at 20% 10%, rgba(34,211,238,0.12), transparent),
+                    radial-gradient(1000px 700px at 80% 30%, rgba(96,165,250,0.12), transparent),
+                    var(--bg);
+    }
+    .error-card {
+        border-color: rgba(10,10,10,0.06);
+        box-shadow: 0 10px 40px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.4);
+    }
+    .error-btn {
+        border-color: rgba(0,0,0,0.08);
+        background: rgba(255,255,255,0.9);
+    }
+}
